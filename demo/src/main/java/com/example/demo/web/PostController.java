@@ -36,7 +36,7 @@ public class PostController {
                                               Principal principal) {
         ResponseEntity<Object> errors = responseErrorValidation.mapValidationService(bindingResult);
         if(!ObjectUtils.isEmpty(errors)) return errors;
-
+        System.out.println("NENaaaaaaaaaaaaaaaaaaaaaaa");
         Post post = postService.createPost(postDTO, principal);
         PostDTO createdPostDTO = postFacade.postToPostDTO(post);
 
